@@ -6,13 +6,20 @@
     <link th:href="@{/items.css}" rel="stylesheet" /> 
 </head>
 <body>
-    <div class="items-container">     
+    <a href="/createItemForm">Add a new item</a>
+    <div class="item-container">     
         <div class="item" th:each="item: ${items}">
-            <img th:src="@{pexels-wdnet-867349.jpg}" height="40" width="40" />
-            <div class="item-element" th:text="${item.id}"></div>
-            <div class="item-element" th:text="${item.name}"></div>
-            <div class="item-element" th:text="${item.quantity}"></div>
+            <img th:src="@{pexels-wdnet-867349.jpg}" height="100" width="100" />
+            <div class="item-element item-id" th:text="|Item id: ${item.id}|"></div>
+            <div class="item-element item-name" th:text="${item.name}"></div>
+            <div class="item-element item-quantity" th:text="|In Stock: ${item.quantity}|"></div>
         </div>
+        <!--Adding delete functionality-->
+        <!-- Comment shortcut ctrl + / -->
+        <form th:action="@{/deleteItem}" method="post">
+            <input type="hidden" name="id" th:value="${item.id}" />
+            <button type="submit">Delete</button>
+        </form>
     </div>
 </body>
 </html>

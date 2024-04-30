@@ -1,4 +1,22 @@
 .item-container {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.item-element {
+    font-size: 14px;
+}
+.item-id {
+    color: rgb(40, 89, 163);
+    font-weight: bold;
+}
+
+.item-name {
+    color: black;
+}
+
+.item-quantity {
+    color: dimgrey;
 }

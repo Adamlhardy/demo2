@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Create a New Item</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <form th:action="@{/createItem}" method="post">
+        <label for="item-id"> Enter an Item Id: </label>
+        <input th:field="*{item-id}" />
+        <label for="item-name"> Enter a Name: </label>
+        <input id="item-name" name="item-name">
+        <label for="itemQuantity"> Enter a Quantity: </label>
+        <input type="number" id="itemQuantity" name="itemQuantity">
+        <button type=submit> Create Item </button>
+        <button type="reset"> Reset Form</button>
+    </form>
+</body>
+</html>

@@ -12,10 +12,8 @@ import com.example.demo.Models.Items;
 
 @Service
 public class ItemService {
-    
+    final String url = "http://localhost:8080/api/items";
     public List<Items> getAllItems() {
-        String url = "http://localhost:8080/api/items";
-
         RestTemplate restTemplate = new RestTemplate();
 
         ResponseEntity<List<Items>> result = restTemplate.exchange(url, 
@@ -26,4 +24,10 @@ public class ItemService {
 
         return result.getBody();
     }
-}
+
+    public void deleteItem(String id) {
+        String deleteUrl = url + "/" + id;
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.delete(deleteUrl); //sends in the delete request
+    }
+} 
