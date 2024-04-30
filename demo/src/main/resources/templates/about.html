@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>About Me</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--Implemented CSS with Style element-->
+    <style>
+    /* Styling for the first unordered list */
+    .list1 {
+      background-color: #ebbbca;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .list1 li {
+      padding: 10px 0;
+      border-bottom: 1px solid #ccc;
+    }
+  
+    /* Styling for the second unordered list */
+    .list2 {
+      background-color: #ebbbca;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .list2 li {
+      padding: 10px 0;
+      border-bottom: 1px solid #bbb;
+      color: #333;
+    }
+  
+    .list2 li:last-child {
+      border-bottom: none; /* Removing border from the last item */
+    }
+
+    /* Styling for the h4 header */
+    h4 {
+      color: #ebbbca;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    /* Styling for the paragraph */
+    p {
+      color: #444;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: justify;
+      margin: 10px 0;
+    }
+
+    /* Styling to center "Portrait of Adam Hardy" */
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    } 
+  </style>
+</head>
+
+<body>
+
+    <img src="@{IMG_2547.jpg}" alt="Portrait of Adam Hardy" class="center"/>
+    <h2>Adbout Me</h2>
+        
+    <p>Driven by a passion for problem-solving, a deep appreciation for 
+        mathematics, and a natural inclination towards organization, I find 
+        satisfaction in unraveling complex equations and learning valuable 
+        lessons from each failed attempt. The experiences are not just inspiring 
+        but also enrich my understanding of Cloud Application Development 
+        challenges and their solutions. Recognizing the potential for comparable 
+        fulfillment and the opportunity to expand my knowledge and professional 
+        growth, I'm shifting gears into the dynamic realm of IT. This transition 
+        aligns with my abilities, offering a platform to apply my skills, contribute 
+        meaningfully, and continually advance in a field that resonates with my 
+        aspirations.
+    </p> 
+       
+    <h4>Relevant Skills:</h4>
+    <!-- First unordered list -->
+    <ul class="list1">
+         <li>Team Collaboration</li>
+         <li>Incident Management</li>
+         <li>Technical Support</li>
+         <li>Problem-Solving</li>
+         <li>Operating Systems</li>
+         <li>Attention to Detail</li>
+         <li>Software Installation</li>
+         <li>Public Speaking</li>
+    </ul>
+       
+    <h4>Hobbies:</h4>
+    <!-- Second unordered list -->
+    <ul class="list2">
+         <li>Creative Writing</li>
+         <li>Photography</li>
+         <li>Cooking</li>
+         <li>Interior Design</li>
+         <li>Computer Programming</li>
+    </ul>    
+
+</body>
+</html>
